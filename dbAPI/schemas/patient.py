@@ -1,14 +1,15 @@
 from datetime import date, datetime
 
 from pydantic import BaseModel, ConfigDict, Field
+from typing import Annotated, Literal, Optional
 
 
 class PatientCreate(BaseModel):
     first_name: str = Field(min_length=1, max_length=100)
     last_name: str = Field(min_length=1, max_length=100)
     date_of_birth: date | None = None
-    gender: str | None = Field(default=None, max_length=30)
-    phone: str | None = Field(default=None, max_length=20)
+    gender: Annotated[Literal['male', 'female', 'others'] , Field(..., description='Gender of the patient')]
+    phone: str = Field(pattern=r"^[0-9]{10}$"  , description= "Must be exactly 10 digits" )
 
 
 class PatientUpdate(BaseModel):
