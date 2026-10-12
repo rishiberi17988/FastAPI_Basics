@@ -3,7 +3,7 @@
 ![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white)
 
-A collection of projects built with **FastAPI**, covering REST API development, database integration, CRUD operations, and machine learning model deployment.
+A hands-on learning repository for exploring **FastAPI fundamentals**, building REST APIs, working with databases, implementing CRUD operations, and integrating machine learning models.
 
 ## Projects
 
